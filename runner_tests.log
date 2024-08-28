@@ -1,0 +1,16 @@
+2024-08-28 18:39:13,327 | ERROR : Неверный тип данных для объекта Runner
+Traceback (most recent call last):
+  File "C:\ProjectUrbanUniversity\lesson12\tests_12_4.py", line 80, in test_run
+    run_cls2 = Runner(467)  # Передаем нестроковый тип для name
+               ^^^^^^^^^^^
+  File "C:\ProjectUrbanUniversity\lesson12\tests_12_4.py", line 14, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано int
+2024-08-28 18:39:13,330 | ERROR : Неверная скорость для Runner
+Traceback (most recent call last):
+  File "C:\ProjectUrbanUniversity\lesson12\tests_12_4.py", line 66, in test_walk
+    run_cls1 = Runner('Вася', speed=-5)  # Передаем отрицательную скорость
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProjectUrbanUniversity\lesson12\tests_12_4.py", line 19, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -5
